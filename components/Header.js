@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import ProfileImage from "../public/images/ProfileImage.png";
+import ProfileImage from "../public/images/profileImage.png";
 import searchIcon from "../public/icons/searchIcon.svg";
 import messageIcon from "../public/icons/message-text.svg";
 import notificationIcon from "../public/icons/notification.svg";
@@ -11,7 +11,7 @@ function Header(props) {
   return (
     <div className="flex justify-between pb-3 border-b-2 border-[#F1F6FC]">
       <div className="flex align-middle">
-        <Image src={ProfileImage} />
+        <Image src={ProfileImage} alt='img'/>
         <p className="my-auto font-semibold ml-4">Your Business</p>
       </div>
       <div className="search_box2 p-0 h-10   rounded-full bg-white w-1/3 border-[#D5EAF0] flex justify-between align-middle my-auto">
@@ -20,12 +20,12 @@ function Header(props) {
           placeholder="Search"
           className=" w-full focus:outline-none rounded-full px-1"
         />
-        <Image src={searchIcon} className=" cursor-pointer" />
+        <Image src={searchIcon} className=" cursor-pointer"  alt='img'/>
       </div>
       <div className="flex">
-        <Image src={messageIcon} />
+        <Image src={messageIcon} alt='img'/>
         <div className=" relative my-auto bg-[#FBFBFB] rounded-xl px-3 py-2 ml-3">
-          <Image src={notificationIcon} className=" absolute" />
+          <Image src={notificationIcon} className=" absolute" alt='img' />
           <span
             className=" absolute bg-[#81D0DF] text-white rounded-full text-xs   my-auto w-5 h-5 flex align-middle justify-center"
             style={{ top: "-6px", right: "0" }}
@@ -47,7 +47,7 @@ function Header(props) {
                 toggleDropdown ? "rotate_dropdown_icon" : "reset_dropdown_icon"
               }`}
             >
-              <Image src={chevronIcon} />
+              <Image src={chevronIcon} alt='img'/>
             </span>
           </div>
           <div
