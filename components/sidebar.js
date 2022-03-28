@@ -11,7 +11,7 @@ import profile2UserIcon from "../public/icons/profile-2user.svg";
 import receiptIcon from "../public/icons/receipt.svg";
 import insuranceIcon from "../public/icons/insurance.svg";
 import taskSquareIcon from "../public/icons/task-square.svg";
-function sidebar(props) {
+function Sidebar(props) {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -36,45 +36,45 @@ function sidebar(props) {
       </div>
       <div className="top_button flex flex-col justify-center px-12 ">
         <div className="flex">
-          <Image src={userIcon} />
+          <Image src={userIcon} alt='img'/>
           <p className="text-white ml-6 font-semibold cursor-pointer">Occupants</p>
         </div>
       </div>
       <div className="flex flex-col justify-center px-12  mt-4">
         <div className="flex my-4">
-          <Image src={beagleIcon} />
+          <Image src={beagleIcon} alt='img'/>
           <p className=" ml-6 cursor-pointer"> Pooch Marketplace</p>
         </div>
         <div className="flex my-4">
-          <Image src={receiptIcon} width={20} height={20} />
+          <Image src={receiptIcon} width={20} height={20} alt='img'/>
           <p className=" ml-6 cursor-pointer"> Invoices</p>
         </div>
         <div className="flex my-4">
-          <Image src={cardIcon} />
+          <Image src={cardIcon} alt='img'/>
           <p className=" ml-6 cursor-pointer">Payments</p>
         </div>
         <div className="flex my-4">
-          <Image src={profile2UserIcon} />
+          <Image src={profile2UserIcon} alt='img'/>
           <p className=" ml-6 cursor-pointer">Employees</p>
         </div>
         <div className="flex my-4">
-          <Image src={calendarIcon} />
+          <Image src={calendarIcon} alt='img'/>
           <p className=" ml-6 cursor-pointer">Calendar</p>
         </div>
         <div className="flex my-4">
-          <Image src={taskSquareIcon} />
+          <Image src={taskSquareIcon} alt='img'/>
           <p className=" ml-6 cursor-pointer">Quickbooks</p>
         </div>
         <div className="flex my-4">
-          <Image src={diagramIcon} />
+          <Image src={diagramIcon} alt='img'/>
           <p className=" ml-6 cursor-pointer">Analytics </p>
         </div>
         <div className="flex my-4">
-          <Image src={dollarCircleIcon} />
+          <Image src={dollarCircleIcon} alt='img'/>
           <p className=" ml-6 cursor-pointer">Capital</p>
         </div>
         <div className="flex my-4">
-          <Image src={insuranceIcon} />
+          <Image src={insuranceIcon} alt='img'/>
           <p className=" ml-6 cursor-pointer">Insurance</p>
         </div>
       </div>
@@ -82,4 +82,4 @@ function sidebar(props) {
   );
 }
 
-export default sidebar;
+export default Sidebar;

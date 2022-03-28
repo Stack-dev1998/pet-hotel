@@ -6,12 +6,12 @@ import img1 from "../public/images/Img1.png";
 import img2 from "../public/images/Img2.png";
 import img3 from "../public/images/Img3.png";
 let data = [
-  { name: "Lilliana M.", price: "$150", btnText: "grooming", img: img1 },
-  { name: "Lilliana C.", price: "$130", btnText: "Daycare", img: img2 },
-  { name: "Lilliana M.", price: "$150", btnText: "grooming", img: img3 },
-  { name: "Lilliana C.", price: "$130", btnText: "Daycare", img: img2 },
-  { name: "Lilliana M.", price: "$150", btnText: "grooming", img: img1 },
-  { name: "Lilliana C.", price: "$130", btnText: "Daycare", img: img3 },
+  {id:1, name: "Lilliana M.", price: "$150", btnText: "grooming", img: img1 },
+  {id:2, name: "Lilliana C.", price: "$130", btnText: "Daycare", img: img2 },
+  {id:3, name: "Lilliana M.", price: "$150", btnText: "grooming", img: img3 },
+  {id:4, name: "Lilliana C.", price: "$130", btnText: "Daycare", img: img2 },
+  {id:5, name: "Lilliana M.", price: "$150", btnText: "grooming", img: img1 },
+  {id:6, name: "Lilliana C.", price: "$130", btnText: "Daycare", img: img3 },
 ];
 
 function MainSection(props) {
@@ -23,20 +23,20 @@ function MainSection(props) {
 
         <p className="font-bold my-auto mt-5">Analytics</p>
         <div className="flex items-center">
-          <div class="circular mt-4">
-            <div class="inner"></div>
-            <div class="number flex flex-col justify-center items-center text-center font-bold">
+          <div className="circular mt-4">
+            <div className="inner"></div>
+            <div className="number flex flex-col justify-center items-center text-center font-bold">
               100%
               <span className=" text-xs text-black opacity-50 font-normal">
                 Occupancy rate
               </span>
             </div>
-            <div class="circle">
-              <div class="bar left">
-                <div class="progress"></div>
+            <div className="circle">
+              <div className="bar left">
+                <div className="progress"></div>
               </div>
-              <div class="bar right">
-                <div class="progress"></div>
+              <div className="bar right">
+                <div className="progress"></div>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ function LeftSide() {
           Search hotel occupants
         </p>
         <span className=" font-medium cursor-pointer">
-          <Image src={searchIcon} />
+          <Image src={searchIcon} alt='img'/>
         </span>
       </div>
 
@@ -94,7 +94,7 @@ function LeftSide() {
       <div className="flex justify-between">
         <div className=" rounded-xl   flex flex-col   items-center w-1/3 p-3 bg-[#df8181] text-center text-white box_shadow">
           <div className=" w-20 h-20 mx-auto">
-            <Image src={img2} />
+            <Image src={img2} alt='img'/>
           </div>
           <p className=" font-semibold mt-3">Jonathan D.</p>
           <button className="uppercase px-2 py-1 my-3 rounded-md text-xs font-semibold bg-white text-[#df8181]  s ">
@@ -110,7 +110,7 @@ function LeftSide() {
 
         <div className=" rounded-xl box_shadow flex flex-col   items-center w-1/3 p-3 bg-white text-center">
           <div className=" w-20 h-20 mx-auto">
-            <Image src={img1} />
+            <Image src={img1} alt='img'/>
           </div>
           <p className=" font-semibold mt-3">Jassica P.</p>
           <button className=" uppercase px-2 py-1 my-3 rounded-md text-xs font-semibold bg-[#df8181] text-white ">
@@ -128,10 +128,10 @@ function LeftSide() {
       <div className="  p-3 h-96 overflow-y-scroll mt-5">
         {data.map((el) => {
           return (
-            <div className="flex divide-x divide-[red]   box_shadow rounded-xl mb-5">
+            <div key={el.id} className="flex divide-x divide-[red]   box_shadow rounded-xl mb-5">
               <div className=" w-9/12 flex   items-center p-4 ">
                 <div className=" w-20 h-20  ">
-                  <Image src={el.img} />
+                  <Image src={el.img} alt='img'/>
                 </div>
                 <div className="ml-4">
                   <p className="font-bold">Lilliana M.</p>
