@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -13,4 +16,199 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.top_button {
+  height: 80px;
+  background: linear-gradient(90deg, #920829 43.67%, #b02323 97.5%);
+
+  border-radius: 21px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #92082a;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #92082a;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.search_box {
+  padding: 10px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 0px 2px rgba(8, 117, 146, 0.3));
+}
+.search_box2{
+  padding: 3px 6px 3px 6px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 0px 2px rgba(8, 117, 146, 0.3));
+}
+.show_dropdown {
+  width: 100%;
+  height: auto;
+  border-radius: 0px 0px 10px 10px;
+}
+.hide_dropdown {
+  display: none;
+}
+.reset_dropdown_icon {
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+}
+.rotate_dropdown_icon {
+  transform: rotate(-180deg);
+  transition: all 0.5s ease-in-out;
+}
+.box_shadow{
+  box-shadow: 0px 5px 10px #8F8F8F ;
+}
+.btn_shadow{
+  box-shadow: 0px 5px 6px #8F8F8F ;
+}
+.text_shadow{
+  text-shadow: #8F8F8F 1px 4px 3px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+ 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F1F1F1;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C4C4C4; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.circular{
+  height:100px;
+  width: 100px;
+  position: relative;
+   
+}
+.circular .inner{
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #FFFFFF;
+  border-radius: 100%;
+ 
+}
+.circular .number{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:10;
+  font-size:18px;
+ 
+  color:#910707;
+}
+.circular .bar{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #DF8181;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.circle .bar .progress{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #910707;
+}
+.circle .left .progress{
+  z-index:1;
+  animation: left 4s linear both;
+}
+@keyframes left{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+.circle .right {
+  transform: rotate(180deg);
+  z-index:3;
+ 
+}
+.circle .right .progress{
+  animation: right 4s linear both;
+  animation-delay:4s;
+}
+@keyframes right{
+  100%{
+    transform: rotate(180deg);
+  }
 }
